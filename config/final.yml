@@ -1,1 +1,6 @@
-name: my-bosh
+---
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/ardo-blobs
+final_name: ardo_app

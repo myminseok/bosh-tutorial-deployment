@@ -1,1 +1,12 @@
---- {}
+libyaml_0.1.4/yaml-0.1.4.tar.gz:
+  size: 471759
+  sha: sha256:7bf81554ae5ab2d9b6977da398ea789722e0db75b86bffdaeb4e66d961de6a37
+ruby_1.9.3/bundler-1.2.1.gem:
+  size: 226816
+  sha: sha256:7093e4f750cf34b6051d765e7f86a88ebe4394921571532233f640f1a7ce6790
+ruby_1.9.3/ruby-1.9.3-p484.tar.gz:
+  size: 12576996
+  sha: sha256:d684bc3a5ba72cda9ef30039f783c0f8cdc325bae5c8738c7bf05577cbe8f31d
+ruby_1.9.3/rubygems-1.8.24.tgz:
+  size: 380101
+  sha: sha256:4b61fa51869b3027bcfe67184b42d2e8c23fa6ab17d47c5c438484b9be2821dd

@@ -1,0 +1,36 @@
+---
+name: bosh-tutorial-deployment
+
+releases:
+- {name: ardo_app, version: latest}
+
+stemcells:
+- alias: default
+  os: ubuntu-xenial
+  version: latest 
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  canary_watch_time: 15000-30000
+  update_watch_time: 15000-300000
+
+instance_groups:
+- name: web_ui
+  instances: 1
+  # replace with the name of azs defined in cloud-config
+  # to view existing azs, do `bosh int <(bosh cloud-config) --path=/azs`
+  azs: [z1]
+  jobs:
+  - name: web_ui
+    release: ardo_app
+    properties:
+      port: 8080
+  # replace with the name of vm_types defined in cloud-config
+  # to view available vm_types, do `bosh int <(bosh cloud-config) --path=/vm_types`
+  vm_type: default
+  stemcell: default
+  networks:
+  # replace with the name of networks defined in cloud-config
+  # to view available networks, do `bosh int <(bosh cloud-config) --path=/networks`
+  - name: concourse
